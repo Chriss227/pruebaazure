@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class App {
   readonly currentYear = new Date().getFullYear();
+  showDetails = false;
+
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+  }
 }

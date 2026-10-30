@@ -26,8 +26,8 @@
     <aside class="preview-card" aria-label="Vista de estado de la demostración">
       <div class="preview-top">
         <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span class="preview-address">tu-sitio.azurewebsites.net</span>
-        <span class="lock-icon" aria-label="Conexión segura">⌑</span>
+        <span class="preview-address">vista previa de la demo</span>
+        <span class="lock-icon" aria-label="Vista ilustrativa">◈</span>
       </div>
       <div class="preview-content">
         <div class="cloud-art" aria-hidden="true">
@@ -38,9 +38,9 @@
           <span class="cloud-spark spark-three"></span>
           <span class="cloud-check">✓</span>
         </div>
-        <span class="preview-kicker">TODO EN ORDEN</span>
-        <strong>Tu sitio está<br>en línea.</strong>
-        <span class="preview-caption">Angular sirve la página desde App Service.</span>
+        <span class="preview-kicker">VISTA DE PRUEBA</span>
+        <strong>Una página<br>para probar.</strong>
+        <span class="preview-caption">Angular lista para publicar en App Service.</span>
         <div class="tech-pills">
           <span>Angular</span>
           <span>Azure</span>
@@ -48,6 +48,70 @@
       </div>
       <span class="card-glow" aria-hidden="true"></span>
     </aside>
+  </section>
+
+  <section class="features" aria-labelledby="features-title">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-line"></span> LO ESENCIAL DE ESTA DEMO</p>
+        <h2 id="features-title">Pequeña por fuera,<br><span>lista para probar.</span></h2>
+      </div>
+      <button
+        class="details-toggle"
+        type="button"
+        aria-controls="app-details"
+        [attr.aria-expanded]="showDetails"
+        (click)="toggleDetails()"
+      >
+        <span>{{ showDetails ? 'Ocultar detalles' : 'Ver detalles' }}</span>
+        <span class="toggle-icon" aria-hidden="true">{{ showDetails ? '−' : '+' }}</span>
+      </button>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-number">01</span>
+        <span class="feature-icon angular-icon" aria-hidden="true">A</span>
+        <h3>Hecha con Angular</h3>
+        <p>Una interfaz de una sola página, con componentes y estilos que se adaptan a tu pantalla.</p>
+        <span class="feature-tag">INTERFAZ WEB</span>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">02</span>
+        <span class="feature-icon azure-icon" aria-hidden="true">↗</span>
+        <h3>En Azure App Service</h3>
+        <p>Un servidor Node entrega la página web y usa el puerto que Azure le asigna.</p>
+        <span class="feature-tag">NODE 24 LTS</span>
+      </article>
+
+      <article class="feature-card">
+        <span class="feature-number">03</span>
+        <span class="feature-icon github-icon" aria-hidden="true">⌘</span>
+        <h3>Lista para GitHub</h3>
+        <p>Al conectar GitHub Actions, puedes automatizar la publicación cada vez que actualices el proyecto.</p>
+        <span class="feature-tag">DESPLIEGUE AUTOMATIZABLE</span>
+      </article>
+    </div>
+
+    <section
+      class="details-panel"
+      id="app-details"
+      [hidden]="!showDetails"
+      aria-label="Detalles técnicos de la aplicación"
+    >
+      <div class="details-indicator" aria-hidden="true"><span></span></div>
+      <div>
+        <p class="details-kicker">DETALLES DE LA APLICACIÓN</p>
+        <h3>Solo lo necesario para una primera prueba.</h3>
+        <p>Angular construye la interfaz; Node la sirve en local y en App Service. Esta demo no usa API ni base de datos. La publicación desde GitHub empieza cuando se conecta el flujo de trabajo a tu repositorio.</p>
+      </div>
+      <div class="details-stack" aria-label="Tecnologías">
+        <span>Angular 22</span>
+        <span>Node.js 24</span>
+        <span>Azure App Service</span>
+      </div>
+    </section>
   </section>
 
   <footer class="footer">
